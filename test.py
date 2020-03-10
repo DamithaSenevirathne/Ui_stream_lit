@@ -4,15 +4,14 @@ import time
 import os
 
 def _max_width_():
-    max_width_str = f"max-width: 2000px;"
-    st.markdown(
-        f"""
+    max_width_str = st.markdown(
+        """
     <style>
     .reportview-container .main .block-container{{
-        {max_width_str}
+        {}
     }}
     </style>    
-    """,
+    """.format("max-width: 2000px;"),
         unsafe_allow_html=True,
     )
 
